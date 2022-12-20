@@ -51,7 +51,7 @@ jobs:
           cp /home/runner/work/china-ip-list/china-ip-list/bin/Debug/netcoreapp3.1/chn_ip.txt /home/runner/work/china-ip-list/china-ip-list/chn_ip.txt
           cp /home/runner/work/china-ip-list/china-ip-list/bin/Debug/netcoreapp3.1/chnroute.txt /home/runner/work/china-ip-list/china-ip-list/chnroute.txt
           #把chnroute.txt转换为routeros可用文件
-          cat chnroute.txt|sed -e '/^#.*/d' -e 's/^/add address=/g' -e 's/$/ list=CNIP/g'|sed -e $'1i\\\n/ip firewall address-list' -e $'1i\\\nremove [/ip firewall address-list find list=CNIP]' -e $'1i\\\nadd address=192.168.50.0/24 list=CNIP comment=local-network' -e $'1i\\\nadd address=192.168.2.0/24 list=CNIP comment=local-network' |sed '$a \/' |sed '$a /file remove chinaip.rsc'>chinaip.rsc
+          cat chnroute.txt|sed -e '/^#.*/d' -e 's/^/add address=/g' -e 's/$/ list=china-ip/g'|sed -e $'1i\\\n/ip firewall address-list' -e $'1i\\\nremove [/ip firewall address-list find list=china-ip]' -e $'1i\\\nadd address=192.168.50.0/24 list=china-ip comment=local-network' -e $'1i\\\nadd address=192.168.2.0/24 list=china-ip comment=local-network' |sed '$a \/' |sed '$a /file remove chinaip.rsc'>chinaip.rsc
           git add chn_ip.txt
           git add chnroute.txt
           git add chinaip.rsc
