@@ -47,7 +47,7 @@ jobs:
           pwd
           git rm chn_ip.txt
           git rm chnroute.txt
-          git commit -m "删除旧有IP文件!"
+          git commit -m "删除旧IP文件!"
           cp /home/runner/work/china-ip-list/china-ip-list/bin/Debug/netcoreapp3.1/chn_ip.txt /home/runner/work/china-ip-list/china-ip-list/chn_ip.txt
           cp /home/runner/work/china-ip-list/china-ip-list/bin/Debug/netcoreapp3.1/chnroute.txt /home/runner/work/china-ip-list/china-ip-list/chnroute.txt
           #把chnroute.txt转换为routeros可用文件
@@ -55,7 +55,7 @@ jobs:
           git add chn_ip.txt
           git add chnroute.txt
           git add chinaip.rsc
-          git commit -m "提交新的chn_ip.txt，chnroute.txt，chinaip.rsc文件，更新于$(date "+%Y-%m-%d %H:%M:%S")"
+          git commit -m "提交新文件，更新于$(date "+%Y-%m-%d %H:%M:%S")"
 
       # 更新至远程github代码仓库中
       - name: Push changes
