@@ -6,8 +6,8 @@
 
 ### 每天自动更新中国范围IP列表。Update Mainland China ip's list in every day
 
-  *路由器使用（Openwrt） https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt <br>
-  *RouterOS 使用 https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chinaip.rsc <br>
-  *其他客户端使用直接访问 https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chn_ip.txt
+  *路由器使用（Openwrt） https://github.com/be-engineer/china-ip-list/master/chnroute.txt <br>
+  *RouterOS 使用 https://github.com/be-engineer/china-ip-list/master/chinaip.rsc <br>
+  *其他客户端使用直接访问 https://github.com/be-engineer/china-ip-list/master/chn_ip.txt
 
 ### 该项目从其他 github 仓库 fork，感谢 githuber 提供的脚本
